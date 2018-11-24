@@ -35,7 +35,7 @@ jQuery(function(){
     .then( (response) => { 
       console.log('value of response: ', response);
     })
-    .catch( (error) =>{
+    .catch( (error) => {
       console.log('value of error: ', error);
     });
     console.log('AFTER AJAX REQUEST');
@@ -55,11 +55,14 @@ jQuery(function(){
     .then( response => response.json())
     .then((data) => {
       console.log('value of data: ', data);
+      $("#listReturn").empty();
+      data.forEach(element => {
+        $("#listReturn").append("<strong>Title:</strong> " + element.title + " <strong>Text:</strong> " + element.text + '<br/>');
+      });
     })
-    .catch( (error) =>{
+    .catch((error) =>{
       console.log('value of error: ', error);
     });
-
 
   })
 
