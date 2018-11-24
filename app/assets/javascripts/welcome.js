@@ -9,6 +9,11 @@ var textField = '';
 
 jQuery(function(){
 
+  $('#aboutPageButton').click(function(){
+    console.log('inside aboutPageButton click');
+    window.location.href = '/about';
+  })
+
   $('#buttonPOST').click(function(){
     console.log('inside buttonPOST');
     console.log('BEFORE AJAX REQUEST');
