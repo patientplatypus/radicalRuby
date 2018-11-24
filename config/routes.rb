@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about/index'
+  match "/about" => "about#index", :via => 'get'
   get 'welcome/index'
   resources :rez
   root 'welcome#index'
